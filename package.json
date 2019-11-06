@@ -1,0 +1,27 @@
+{
+  "name": "move-over",
+  "version": "1.0.0",
+  "description": "Moves cards from one project column to another based on a given pattern.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mxie/move-scheduled.git"
+  },
+  "keywords": [],
+  "author": "Melissa Xie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mxie/move-scheduled/issues"
+  },
+  "homepage": "https://github.com/mxie/move-scheduled#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}

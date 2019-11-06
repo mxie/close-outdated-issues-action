@@ -1,0 +1,15 @@
+name: "Move Over"
+description: "Moves card from one project column to another based on a given pattern."
+inputs:
+  project-id:
+    description: "The ID of the project board."
+    required: true
+  src-column-id:
+    description: "The ID of the column to move the card from."
+    required: true
+  dest-column-id:
+    description: "The ID of the column to move the card to."
+    required: true
+runs:
+  using: "node12"
+  main: "dist/index.js"
