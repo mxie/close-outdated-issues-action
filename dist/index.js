@@ -9549,7 +9549,7 @@ const github = __webpack_require__(867);
 
 try {
   const projectId = core.getInput('project-id');
-  console.log(`Project ID: ${project}`);
+  console.log(`Project ID: ${projectId}`);
 
   const srcColumnId = core.getInput('src-column-id');
   console.log(`Source: ${srcColumnId}`);
