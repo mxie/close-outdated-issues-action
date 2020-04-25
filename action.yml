@@ -1,14 +1,8 @@
-name: "Close Outdates Issues"
+name: "Close Outdated Issues"
 description: "Closes issues with past dates in the titles"
 inputs:
   token:
     description: "GitHub token"
-    required: true
-  owner:
-    description: "owner name of the target repo"
-    required: true
-  repo:
-    description: "name of the target repo"
     required: true
 runs:
   using: "node12"
