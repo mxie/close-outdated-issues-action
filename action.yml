@@ -1,5 +1,5 @@
-name: "Move Over"
-description: "Moves card from one project column to another based on a given pattern."
+name: "Close Outdates Issues"
+description: "Closes issues with past dates in the titles"
 inputs:
   token:
     description: "GitHub token"
@@ -13,3 +13,6 @@ inputs:
 runs:
   using: "node12"
   main: "index.js"
+branding:
+  icon: "check-square"
+  color: "purple"
