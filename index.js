@@ -33,8 +33,10 @@ async function run() {
         octokit.issues.update({
           ...ghContext.repo,
           issue_number: issueNumber,
-          status: "closed",
+          state: "closed",
         });
+        
+        console.log(`Closed #${issue.number}.`);
 
         issuesClosed++;
       }
