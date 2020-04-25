@@ -1,14 +1,14 @@
 name: "Move Over"
 description: "Moves card from one project column to another based on a given pattern."
 inputs:
-  project-id:
-    description: "The ID of the project board."
+  token:
+    description: "GitHub token"
     required: true
-  src-column-id:
-    description: "The ID of the column to move the card from."
+  owner:
+    description: "owner name of the target repo"
     required: true
-  dest-column-id:
-    description: "The ID of the column to move the card to."
+  repo:
+    description: "name of the target repo"
     required: true
 runs:
   using: "node12"

@@ -9,6 +9,4 @@ jobs:
     - name: Run Action
       uses: ./
       with:
-        project-id: 1
-        src-column-id: 2
-        dest-column-id: 3
+        token: ${{ secrets.GITHUB_TOKEN }}
