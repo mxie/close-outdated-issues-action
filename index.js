@@ -11,7 +11,7 @@ async function run() {
     state: "open",
   });
 
-  const datePattern = /(\d\d).(\d\d).\d{2,4}/;
+  const datePattern = /(\d\d).(\d\d).(\d{2,4})/;
   const today = new Date();
 
   console.log(`Found ${openIssues.length} open issues.`);
@@ -25,9 +25,14 @@ async function run() {
     const results = datePattern.exec(issueTitle);
 
     if (results !== null) {
-      const [month, day] = results.slice(1);
+      let [month, day, year] = results.slice(1);
 
-      const issueDate = new Date(2020, month - 1, day);
+      // in case it's a 2-digit year
+      if (year < 100) {
+        year += 2000;
+      }
+
+      const issueDate = new Date(year, month - 1, day);
 
       if (issueDate < today) {
         octokit.issues.update({
