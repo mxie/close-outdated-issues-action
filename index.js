@@ -11,7 +11,7 @@ async function run() {
     state: "open",
   });
 
-  const datePattern = /(\d\d).(\d\d).(\d{2,4})/;
+  const datePattern = /(\d\d?).(\d\d?).(\d{2,4})/;
   const today = new Date();
 
   console.log(`Found ${openIssues.length} open issues.`);
