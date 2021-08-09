@@ -1,10 +1,16 @@
 # close-outdated-issues-action
 
-A GitHub Action that closes issues whose titles include a date that's in the
-past.
+A GitHub Action that closes issues whose titles contain a date that has passed.
 
-Dates are assumed to be in the format of `MM-DD-YY[YY]` where `-` could be any
-delimeter.
+The following date formats are supported:
+
+- `YYYY-MM-DD`
+- `YY-MM-DD`
+
+where,
+
+- the leading zero for `MM` and `DD` is optional to represent months January through September.
+- the separator (`-` in the examples) can be any character.
 
 ## Usage
 
@@ -18,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Close issues
-      uses: mxie/close-outdated-issues-action@main
+      uses: mxie/close-outdated-issues-action@main    # replace `main` with release tag
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
