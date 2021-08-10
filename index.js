@@ -27,12 +27,14 @@ async function run() {
     if (results !== null) {
       let [month, day, year] = results.slice(1);
 
-      // in case it's a 2-digit year
+      // if the year is under 100, assume it's from the 2000s
       if (year < 100) {
         year += 2000;
       }
 
       const issueDate = new Date(year, month - 1, day);
+
+      console.log(`Date found in title: ${issueDate.toDateString()}`)
 
       if (issueDate < today) {
         octokit.issues.update({
@@ -40,7 +42,7 @@ async function run() {
           issue_number: issueNumber,
           state: "closed",
         });
-        
+
         console.log(`Closed #${issue.number}.`);
 
         issuesClosed++;
