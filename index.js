@@ -25,7 +25,7 @@ async function run() {
     const results = datePattern.exec(issueTitle);
 
     if (results !== null) {
-      let [month, day, year] = results.slice(1);
+      let [month, day, year] = results.slice(1).map((part) => parseInt(part, 10));
 
       // if the year is under 100, assume it's from the 2000s
       if (year < 100) {
